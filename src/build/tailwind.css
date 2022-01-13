@@ -472,6 +472,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   pointer-events: none;
 }
 
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
 .fixed {
   position: fixed;
 }
@@ -534,14 +538,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .col-span-2 {
   grid-column: span 2 / span 2;
-}
-
-.col-span-3 {
-  grid-column: span 3 / span 3;
-}
-
-.col-span-8 {
-  grid-column: span 8 / span 8;
 }
 
 .col-span-6 {
@@ -853,18 +849,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('/Ressources/images/AquatairScreen.png');
 }
 
-.from-sky-1100 {
-  --tw-gradient-from: #011623;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(1 22 35 / 0));
-}
-
 .from-indigo-1100 {
   --tw-gradient-from: #0D0C3C;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(13 12 60 / 0));
-}
-
-.to-indigo-1100 {
-  --tw-gradient-to: #0D0C3C;
 }
 
 .to-sky-1100 {
