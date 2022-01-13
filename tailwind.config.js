@@ -36,6 +36,9 @@ module.exports = {
                 '20': '20px',
                 '40': '40px'
             },
+            // boxShadow: {
+            //     'innercustom': 'inset 0px 0px 35px 10px #051429'
+            // }
         },
     },
     plugins: [],

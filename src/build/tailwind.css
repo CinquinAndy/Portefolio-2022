@@ -532,6 +532,39 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.col-span-8 {
+  grid-column: span 8 / span 8;
+}
+
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.col-start-5 {
+  grid-column-start: 5;
+}
+
+.col-start-7 {
+  grid-column-start: 7;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -552,8 +585,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 5rem;
 }
 
+.mt-\[300px\] {
+  margin-top: 300px;
+}
+
+.mt-\[150px\] {
+  margin-top: 150px;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .h-\[80px\] {
@@ -671,6 +720,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.grid-cols-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -727,6 +780,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 40px;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -767,16 +828,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(13 19 33 / var(--tw-bg-opacity));
 }
 
+.bg-sky-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-90 {
   --tw-bg-opacity: 0.9;
 }
 
-.bg-opacity-10 {
-  --tw-bg-opacity: 0.1;
-}
-
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'\/Ressources\/images\/cinquinMaevaScreen\.png\'\)\] {
+  background-image: url('/Ressources/images/cinquinMaevaScreen.png');
+}
+
+.bg-\[url\(\'\/Ressources\/images\/LesYDRangeesScreen\.png\'\)\] {
+  background-image: url('/Ressources/images/LesYDRangeesScreen.png');
+}
+
+.bg-\[url\(\'\/Ressources\/images\/AquatairScreen\.png\'\)\] {
+  background-image: url('/Ressources/images/AquatairScreen.png');
 }
 
 .from-sky-1100 {
@@ -789,11 +863,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(13 12 60 / 0));
 }
 
-.from-transparent {
-  --tw-gradient-from: transparent;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 0 / 0));
-}
-
 .to-indigo-1100 {
   --tw-gradient-to: #0D0C3C;
 }
@@ -802,8 +871,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-to: #011623;
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
 .p-20 {
   padding: 5rem;
+}
+
+.p-14 {
+  padding: 3.5rem;
 }
 
 .px-20 {
@@ -830,8 +911,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 9rem;
 }
 
-.pt-\[100px\] {
-  padding-top: 100px;
+.pt-\[300px\] {
+  padding-top: 300px;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .font-body {
@@ -867,8 +960,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-light {
   font-weight: 300;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .uppercase {
@@ -917,6 +1023,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(79 70 229 / var(--tw-text-opacity));
 }
 
+.text-sky-500 {
+  --tw-text-opacity: 1;
+  color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
+.text-sky-400 {
+  --tw-text-opacity: 1;
+  color: rgb(56 189 248 / var(--tw-text-opacity));
+}
+
+.text-indigo-50 {
+  --tw-text-opacity: 1;
+  color: rgb(238 242 255 / var(--tw-text-opacity));
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -935,6 +1056,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .brightness-75 {
   --tw-brightness: brightness(.75);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.brightness-50 {
+  --tw-brightness: brightness(.5);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
