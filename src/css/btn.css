@@ -1,7 +1,6 @@
 .button-animated {
     --duration: 0.5s;
     --move-hover: -4px;
-    display: block;
     outline: none;
     border: none;
     cursor: pointer;
