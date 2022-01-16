@@ -2,7 +2,11 @@ var navblock = document.getElementById("nav-block");
 var btnNav = document.getElementById("btnNav");
 var navRight = document.getElementById("nav-right");
 
-navRight.addEventListener("click", ()=>{
+btnNav.addEventListener('click', ()=>{
+    swapNav();
+})
+
+navRight.addEventListener("click", () => {
     btnNav.click();
 });
 
