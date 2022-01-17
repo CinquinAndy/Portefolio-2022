@@ -1053,6 +1053,14 @@ select {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr));
 }
@@ -1579,6 +1587,10 @@ select {
     grid-column-start: 5;
   }
 
+  .lg\:col-start-3 {
+    grid-column-start: 3;
+  }
+
   .lg\:m-0 {
     margin: 0px;
   }
@@ -1623,6 +1635,10 @@ select {
     display: block;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:hidden {
     display: none;
   }
@@ -1651,6 +1667,10 @@ select {
     height: 400px;
   }
 
+  .lg\:h-\[50px\] {
+    height: 50px;
+  }
+
   .lg\:w-10 {
     width: 2.5rem;
   }
@@ -1673,6 +1693,10 @@ select {
 
   .lg\:w-screen {
     width: 100vw;
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
