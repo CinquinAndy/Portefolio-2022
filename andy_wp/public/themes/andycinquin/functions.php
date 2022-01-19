@@ -66,10 +66,8 @@ add_action('wp_enqueue_scripts', 'andycinquin_enqueue_styles_scripts');
 add_action('after_setup_theme', function () {
     add_theme_support('post-thumbnails');
     add_theme_support('title-tag');
-
-    register_nav_menus([
-        'navigation' => __('Navigation'),
-    ]);
+    register_nav_menu('andycinquin_menu', 'menu personnalisée pour andycinquin');
+    add_theme_support('editor-styles');
 });
 
 add_filter('block_categories_all', function (array $categories) {
