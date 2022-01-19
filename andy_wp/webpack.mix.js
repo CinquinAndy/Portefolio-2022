@@ -19,8 +19,8 @@ const theme = process.env.WP_DEFAULT_THEME;
 mix.setResourceRoot('../');
 mix.setPublicPath(`public/themes/${theme}/assets`);
 
-mix.js('resources/js/app.js', 'public/js')
-  .sass('resources/sass/app.scss', 'public/css')
+mix.js('resources/js/app.js', 'app.js')
+  .sass('resources/sass/app.scss', 'app.css')
   .options({
     postCss: [ tailwindcss('./tailwind.config.js') ],
   })

@@ -5,6 +5,19 @@
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/wordplate/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/johnpbloch/wordpress-core-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/roots/bedrock-autoloader" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/roots/wp-password-bcrypt" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/wordplate/acf" />
+      <excludeFolder url="file://$MODULE_DIR$/andy_wp/vendor/phpoption/phpoption" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
