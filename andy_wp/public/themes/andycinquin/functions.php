@@ -1,5 +1,6 @@
 <?php
 
+use App\Blocs\BlocArticle;
 use App\Blocs\BlocHero;
 
 function andycinquin_enqueue_styles_scripts()
@@ -27,8 +28,6 @@ function andycinquin_enqueue_styles_scripts()
 
     }
     $dependencies = [];
-//    p_register_style('app', get_template_directory_uri() . '/assets/app.css');
-//    $dependencies[] = 'app';
     wp_register_style('btn', get_template_directory_uri() . '/assets/css/btn.css');
     $dependencies[] = 'btn';
     wp_register_style('carroussel', get_template_directory_uri() . '/assets/css/carroussel.css');
@@ -83,3 +82,4 @@ add_filter('block_categories_all', function (array $categories) {
 }, 10, 1);
 
 BlocHero::register();
+BlocArticle::register();
