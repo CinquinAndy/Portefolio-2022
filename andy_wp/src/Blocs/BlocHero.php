@@ -27,5 +27,4 @@ class BlocHero extends Bloc
         ];
     }
 }
-
 ?>

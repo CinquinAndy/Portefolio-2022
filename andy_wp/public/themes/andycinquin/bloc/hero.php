@@ -8,7 +8,8 @@
             </h2>
         </div>
         <div class="flex justify-end items-end w-1/2">
-            <button class="px-16 py-8 lg:text-sm text-xl bg-indigo-600 rounded lg:px-10 lg:py-4">Me contacter</button>
+            <button onclick="location.href = '/contact'"
+                    class="px-16 py-8 lg:text-sm text-xl bg-indigo-600 rounded lg:px-10 lg:py-4">Me contacter</button>
         </div>
     </div>
     <div class="flex overflow-hidden flex-row flex-nowrap mt-20">
@@ -61,72 +62,56 @@
             </h2>
         </div>
         <div class="flex flex-col items-end w-1/2 lg:flex-row lg:justify-end">
-            <button class="px-16 py-8 lg:text-sm text-xl bg-indigo-600 rounded lg:px-10 lg:py-4 mb-6 lg:mb-0 lg:mr-6">
+            <button onclick="location.href = '/contact'"
+                    class="px-16 py-8 lg:text-sm text-xl bg-indigo-600 rounded lg:px-10 lg:py-4 mb-6 lg:mb-0 lg:mr-6">
                 Me contacter
             </button>
-            <button class="px-16 py-8 lg:text-sm text-xl bg-sky-600 rounded lg:px-10 lg:py-4">Mes réalisations</button>
+            <button onclick="location.href = '/mes-realisations'"
+                    class="px-16 py-8 lg:text-sm text-xl bg-sky-600 rounded lg:px-10 lg:py-4">Mes réalisations
+            </button>
         </div>
     </div>
     <div class="flex overflow-hidden flex-row flex-nowrap mt-20">
         <div class="flex flex-row flex-nowrap gap-[40px] animate-scrolling-rea">
             <!--            Animate firt part -->
-            <a href="#" class="flex flex-col w-[600px] h-[500px] lg:h-[350px] p-14 pb-4 relative">
-                <h2 class="absolute top-0 left-0 z-30 w-2/3 text-4xl font-black normal-case lg:text-3xl">Cinquin Maeva -
-                    Maquilleuse
-                    Professionnelle</h2>
-                <div
-                    class="custom-card w-full h-full shadow-innercustom bg-[url('/Ressources/images/cinquinMaevaScreen.png')] bg-center bg-cover z-10 brightness-50 my-2"></div>
-                <h2 class="absolute bottom-0 left-0 z-30 text-4xl font-black text-sky-400 lg:text-3xl lg:font-bold">site
-                    vitrine</h2>
-            </a>
-            <a href="#" class="flex flex-col w-[600px] h-[500px] lg:h-[350px] p-14 pb-4 relative">
-                <h2 class="absolute top-0 left-0 z-30 w-2/3 text-4xl font-black normal-case lg:text-3xl">Les YD Rangées
-                    -
-                    Home & Office Organizers</h2>
-                <div
-                    class="custom-card w-full h-full shadow-innercustom bg-[url('/Ressources/images/LesYDRangeesScreen.png')] bg-center bg-cover z-10 brightness-50 my-2"></div>
-                <h2 class="absolute bottom-0 left-0 z-30 text-4xl font-black text-sky-400 lg:text-3xl lg:font-bold">site
-                    vitrine</h2>
-            </a>
-            <a href="#" class="flex flex-col w-[600px] h-[500px] lg:h-[350px] p-14 pb-4 relative">
-                <h2 class="absolute top-0 left-0 z-30 w-2/3 text-4xl font-black normal-case lg:text-3xl">Aquatair -
-                    Entreprise</h2>
-                <div
-                    class="custom-card w-full h-full shadow-innercustom bg-[url('/Ressources/images/AquatairScreen.png')] bg-center bg-cover z-10 brightness-50 my-2"></div>
-                <h2 class="absolute bottom-0 left-0 z-30 text-4xl font-black text-sky-400 lg:text-3xl lg:font-bold">
-                    APPLICATION DE GESTION</h2>
-            </a>
+            <?php foreach (get_posts() as $post): ?>
+                <a href="<?= esc_url(get_permalink(get_posts()[0])) ?>"
+                   class="flex flex-col w-[600px] h-[500px] lg:h-[350px] p-14 pb-4 relative">
+                    <h2 class="absolute top-0 left-0 z-30 w-2/3 text-4xl font-black normal-case lg:text-3xl">
+                        <?= $post->post_title ?>
+                    </h2>
+                    <div
+                        class="custom-card w-full h-full shadow-innercustom bg-<?= $post->ID ?> z-10 brightness-50 my-2"></div>
+                    <style>
+                        .bg-<?= $post->ID ?> {
+                            background: url(<?= get_the_post_thumbnail_url($post)?>) no-repeat center center;
+                            background-size: cover;
+                        }
+                    </style>
+                    <h2 class="absolute bottom-0 left-0 z-30 text-4xl font-black text-sky-400 lg:text-3xl lg:font-bold">
+                        <?php preg_match('/"second_section_subtitle": "(.*)",/', $post->post_content, $matches) ?>
+                        <?= $matches[1] ?>
+                    </h2>
+                </a>
+            <?php endforeach; ?>
 
-            <!--            Animate second part -->
-            <a href="#" class="flex flex-col w-[600px] h-[500px] lg:h-[350px] p-14 pb-4 relative">
-                <h2 class="absolute top-0 left-0 z-30 w-2/3 text-4xl font-black normal-case lg:text-3xl">Cinquin Maeva -
-                    Maquilleuse
-                    Professionnelle</h2>
-                <div
-                    class="custom-card w-full h-full shadow-innercustom bg-[url('/Ressources/images/cinquinMaevaScreen.png')] bg-center bg-cover z-10 brightness-50 my-2"></div>
-                <h2 class="absolute bottom-0 left-0 z-30 text-4xl font-black text-sky-400 lg:text-3xl lg:font-bold">site
-                    vitrine</h2>
-            </a>
-            <a href="#" class="flex flex-col w-[600px] h-[500px] lg:h-[350px] p-14 pb-4 relative">
-                <h2 class="absolute top-0 left-0 z-30 w-2/3 text-4xl font-black normal-case lg:text-3xl">Les YD Rangées
-                    -
-                    Home & Office Organizers</h2>
-                <div
-                    class="custom-card w-full h-full shadow-innercustom bg-[url('/Ressources/images/LesYDRangeesScreen.png')] bg-center bg-cover z-10 brightness-50 my-2"></div>
-                <h2 class="absolute bottom-0 left-0 z-30 text-4xl font-black text-sky-400 lg:text-3xl lg:font-bold">site
-                    vitrine</h2>
-            </a>
-            <a href="#" class="flex flex-col w-[600px] h-[500px] lg:h-[350px] p-14 pb-4 relative">
-                <h2 class="absolute top-0 left-0 z-30 w-2/3 text-4xl font-black normal-case lg:text-3xl">Aquatair -
-                    Entreprise</h2>
-                <div
-                    class="custom-card w-full h-full shadow-innercustom bg-[url('/Ressources/images/AquatairScreen.png')] bg-center bg-cover z-10 brightness-50 my-2"></div>
-                <h2 class="absolute bottom-0 left-0 z-30 text-4xl font-black text-sky-400 lg:text-3xl lg:font-bold">
-                    APPLICATION DE GESTION</h2>
-            </a>
+            <!--             Second part (for carroussel animation) -->
+            <?php foreach (get_posts() as $post): ?>
+                <a href="<?= esc_url(get_permalink(get_posts()[0])) ?>"
+                   class="flex flex-col w-[600px] h-[500px] lg:h-[350px] p-14 pb-4 relative">
+                    <h2 class="absolute top-0 left-0 z-30 w-2/3 text-4xl font-black normal-case lg:text-3xl">
+                        <?= $post->post_title ?>
+                    </h2>
+                    <div
+                        class="custom-card w-full h-full shadow-innercustom bg-<?= $post->ID ?> z-10 brightness-50 my-2"></div>
+                    <h2 class="absolute bottom-0 left-0 z-30 text-4xl font-black text-sky-400 lg:text-3xl lg:font-bold">
+                        <?php preg_match('/"second_section_subtitle": "(.*)",/', $post->post_content, $matches) ?>
+                        <?= $matches[1] ?>
+                    </h2>
+                </a>
+            <?php endforeach; ?>
         </div>
     </div>
-
 
     <!--    Contact part -->
     <div class="flex justify-center items-center mt-[300px] bg-slate-1000 shadow-innercustom rounded p-20">
@@ -142,7 +127,8 @@
                 N’hésitez pas, je serais ravi d’échanger avec vous sur votre projet !
             </p>
             <div class="flex justify-center items-center">
-                <button class="px-16 py-8 lg:text-sm text-xl bg-indigo-600 rounded lg:px-10 lg:py-4">Me
+                <button onclick="location.href = '/contact'"
+                        class="px-16 py-8 lg:text-sm text-xl bg-indigo-600 rounded lg:px-10 lg:py-4">Me
                     contacter
                 </button>
             </div>
