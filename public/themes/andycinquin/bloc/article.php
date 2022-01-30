@@ -28,7 +28,7 @@
                     <?php $img = get_sub_field('img') ?>
                     <div
                        class="flex flex-col justify-start items-start w-[600px] h-[500px] lg:h-[400px] p-14 pb-4 pt-2 relative">
-                        <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 brightness-50 my-2"></div>
+                        <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
                     </div>
                     <style>
                         .bg-<?= $i ?>{
