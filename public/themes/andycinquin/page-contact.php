@@ -2,7 +2,7 @@
 <!-- HERO -->
 <div class="flex relative justify-center items-center w-screen h-screen">
     <div class="grid absolute top-0 left-0 z-30 grid-cols-8 px-20 w-full ">
-        <form action="#" class="lg:col-start-3 col-span-8 lg:col-span-4 mt-[20vh] lg:mt-[15vh] grid grid-cols-3 lg:grid-cols-6 gap-10">
+        <form action="#" method="post" class="lg:col-start-3 col-span-8 lg:col-span-4 mt-[20vh] lg:mt-[15vh] grid grid-cols-3 lg:grid-cols-6 gap-10">
             <?php wp_nonce_field( 'envoyer-message', 'message-verif' ) ?>
             <div class="flex flex-col col-span-3 lg:col-span-6 gap-4">
                 <h1 class="z-20 text-6xl font-bold tracking-widest uppercase lg:text-6xl">CONTACT</h1>
