@@ -46,7 +46,7 @@
                 <?php while( have_rows('images') ) : the_row(); ?>
                     <?php $img = get_sub_field('img') ?>
                     <div class="flex flex-col justify-start items-start w-[600px] h-[500px] lg:h-[400px] p-14 pb-4 pt-2 relative">
-                        <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 brightness-50 my-2"></div>
+                        <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
                     </div>
                     <style>
                         .bg-<?= $i ?>{
@@ -81,7 +81,7 @@
                         <div class="relative flex justify-center items-center">
                             <img src="<?= get_template_directory_uri() ?>/assets/Ressources/icons/3d.svg" alt="wp-test" class="h-20 w-20">
                             <img src="<?= esc_url($img['url']) ?>" alt="<?= esc_url($img['alt']) ?>"
-                                 class="h-6 w-6 skew-y-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 filter invert">
+                                 class="h-6 w-6 skew-y-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
