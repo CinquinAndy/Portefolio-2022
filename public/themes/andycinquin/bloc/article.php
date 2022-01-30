@@ -98,7 +98,7 @@
             </div>
             <p class="py-16 text-xl text-center lg:py-10 lg:text-sm">
                 Une idée, un projet ?
-                Je suis là pour répondre à vos demandes et vous acompagner.
+                Je suis là pour répondre à vos demandes et vous accompagner.
                 <br><br>
                 N’hésitez pas, je serais ravi d’échanger avec vous sur votre projet !
             </p>
