@@ -12,6 +12,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <?php if (is_page('contact')) : ?>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <?php endif; ?>
 </head>
 <body class="relative bg-gradient-to-b from-indigo-1100 to-sky-1100 text-slate-50">
 <?php $menu = wp_get_nav_menu_items('andycinquin_menu') ?>
@@ -180,9 +183,12 @@
     </div>
     <div id="nav-right" class="hidden w-3/5 h-full bg-black bg-opacity-90 lg:block"></div>
 </nav>
+<?php if (!is_home() && !is_page('contact')): ?>
 <div class="flex relative justify-center items-center w-screen h-screen">
-    <?php if(!is_page("contact")): ?>
-    <h1 class="z-20 text-7xl font-light font-semibold tracking-widest lg:text-8xl uppercase"><?= is_home()? single_post_title() : get_the_title(); ?></h1>
+    <?php if (!is_page("contact")): ?>
+        <h1 class="z-20 text-7xl font-light font-semibold tracking-widest lg:text-8xl uppercase">
+            <?= is_home() ? single_post_title() : get_the_title(); ?>
+        </h1>
     <?php endif; ?>
     <div
         class="flex absolute top-1/2 left-1/2 z-10 justify-start items-center w-3/5 transform -translate-x-1/2 -translate-y-1/2">
@@ -238,6 +244,9 @@
     </div>
     <!--    PAGE -->
     <div class="flex absolute bottom-0 left-0 justify-center items-center p-20 mb-24 lg:p-20 lg:mb-0">
-        <h2 class="text-3xl tracking-wider opacity-20 origin-bottom-left -rotate-90 font-body lg:text-xl">‣ ACCUEIL</h2>
+        <h2 class="text-3xl tracking-wider opacity-20 origin-bottom-left -rotate-90 font-body lg:text-xl">‣
+            <?= is_home() ? single_post_title() : get_the_title(); ?>
+        </h2>
     </div>
 </div>
+<?php endif; ?>

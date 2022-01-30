@@ -2,7 +2,8 @@ module.exports = {
   content: require('fast-glob').sync([
     './public/themes/andycinquin/*.php',
     './public/themes/index.php',
-    './public/themes/**/*.php'
+    './public/themes/**/*.php',
+    './public/themes/andycinquin/bloc/*.php'
   ]),
   theme: {
     fontFamily: {

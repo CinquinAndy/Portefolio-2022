@@ -7,8 +7,10 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.4.0",
     "dotenv": "^10.0.0",
+    "glsl-shader-loader": "^0.1.6",
     "laravel-mix": "^6.0.37",
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "three": "^0.137.5"
   },
   "browserslist": [
     ">0.25%",

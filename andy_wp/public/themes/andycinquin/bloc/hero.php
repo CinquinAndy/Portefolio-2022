@@ -97,7 +97,7 @@
 
             <!--             Second part (for carroussel animation) -->
             <?php foreach (get_posts() as $post): ?>
-                <a href="<?= esc_url(get_permalink(get_posts()[0])) ?>"
+                <a href="<?= esc_url(get_permalink($post)) ?>"
                    class="flex flex-col w-[600px] h-[500px] lg:h-[350px] p-14 pb-4 relative">
                     <h2 class="absolute top-0 left-0 z-30 w-2/3 text-4xl font-black normal-case lg:text-3xl">
                         <?= $post->post_title ?>
