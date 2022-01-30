@@ -13,11 +13,14 @@
     },
     "license": "MIT",
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^7.3 || ^8.0.7",
         "ext-curl": "*",
         "ext-json": "*",
-        "wordplate/acf": "^12.0",
-        "wordplate/framework": "^10.0"
+        "wordplate/acf": "^11.0",
+        "wordplate/framework": "^9.5"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
     },
     "config": {
         "optimize-autoloader": true,
@@ -50,6 +53,18 @@
                 "wpackagist-plugin/*",
                 "wpackagist-theme/*"
             ]
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "wpackagist-plugin/advanced-custom-fields-pro",
+                "type": "wordpress-plugin",
+                "version": "5.9.0",
+                "dist": {
+                    "url": "https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k=MWYwNDc4NThhYmZkMDdiY2YzZGIwZmFjMTc0MjQ0NWZkYjQyMzQ3NDQyMDg0MDJlYmZmZTIw&t=5.9.0",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "scripts": {
