@@ -33,7 +33,7 @@
                 </div>
                 <div class="flex justify-end items-end mt-4">
                     <input type="submit"
-                           class="px-16 py-8 lg:text-sm text-xl bg-indigo-600 rounded lg:px-20 lg:py-4"
+                           class="px-16 hover:cursor-pointer py-8 lg:text-sm text-xl bg-indigo-600 rounded lg:px-20 lg:py-4"
                            name="envoyer-message" value="Envoyer le message">
                 </div>
             </div>
