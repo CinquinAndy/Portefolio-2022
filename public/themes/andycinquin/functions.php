@@ -120,13 +120,13 @@ function traitement_formulaire_contact()
                             src = 'https://andy-cinquin.fr/themes/andycinquin/assets/Ressources/icons/LogoCinquinAndy.svg' >
                             </a >
                             </div >
-                            Récapitulatif du mail :
+                            Récapitulatif du mail en provenance de andy-cinquin.fr :
                             <br ><br >
                             Nom / Prénom : " . $name . "
                             <br>
                             Entreprise : " . $company . "
                             <br>
-                            <a style = 'font-style:italic;color:#627BDF'
+                            mail : <a style = 'font-style:italic;color:#627BDF'
                             href = 'mailto:" . $email . "'>
                             " . $email . "
                             </a >
@@ -134,9 +134,11 @@ function traitement_formulaire_contact()
                             Tél : " . $phone . "
                             <br>
                             <br>
+                            Message :
+                            <br>
                             <div style = 'text-align:center' >
                             <font color = '#888888' >
-                            Message : " . $message . "
+                            " . $message . "
                             <br></font>
                              <br><br></td></tr></tbody></table> </td></tr></tbody></table><br><br></div></font></div></body></html>";
 
