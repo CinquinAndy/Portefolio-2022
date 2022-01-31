@@ -690,6 +690,9 @@ select {
 .h-\[700px\] {
   height: 700px;
 }
+.h-\[500px\] {
+  height: 500px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1203,6 +1206,12 @@ select {
   }
   .xl\:h-\[450px\] {
     height: 450px;
+  }
+  .xl\:h-\[1000px\] {
+    height: 1000px;
+  }
+  .xl\:h-\[1100px\] {
+    height: 1100px;
   }
   .xl\:w-8 {
     width: 2rem;
