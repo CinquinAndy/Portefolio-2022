@@ -76,7 +76,7 @@
         <div class="flex flex-row flex-nowrap gap-[20px] xl:gap-[40px] animate-scrolling-rea">
             <!--            Animate firt part -->
             <?php foreach (get_posts() as $post): ?>
-                <a href="<?= esc_url(get_permalink(get_posts()[0])) ?>"
+                <a href="<?= esc_url(get_permalink($post)) ?>"
                    class="flex flex-col w-[400px] xl:w-[600px] h-[400px] xl:h-[350px] p-10 xl:p-14 pb-4 relative">
                     <h2 class="absolute mt-4 xl:mt-0 top-0 left-0 z-30 w-2/3 text-2xl font-black normal-case xl:text-3xl">
                         <?= $post->post_title ?>
@@ -98,7 +98,7 @@
 
             <!--             Second part (for carroussel animation) -->
             <?php foreach (get_posts() as $post): ?>
-                <a href="<?= esc_url(get_permalink(get_posts()[0])) ?>"
+                <a href="<?= esc_url(get_permalink($post)) ?>"
                    class="flex flex-col w-[400px] xl:w-[600px] h-[400px] xl:h-[350px] p-10 xl:p-14 pb-4 relative">
                     <h2 class="absolute mt-4 xl:mt-0 top-0 left-0 z-30 w-2/3 text-2xl font-black normal-case xl:text-3xl">
                         <?= $post->post_title ?>
