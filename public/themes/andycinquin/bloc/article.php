@@ -1,20 +1,20 @@
-<section class="p-8 lg:p-20 pt-[300px] w-full ">
+<section class="p-8 xl:p-20 pt-[300px] w-full ">
     <!--     Derniers projets -->
     <div class="flex justify-between mt-[300px]">
         <div class="w-1/2">
-            <h2 class="text-6xl leading-snug normal-case lg:text-5xl">
+            <h2 class="text-6xl leading-snug normal-case xl:text-5xl">
                 Le <span class="text-sky-500 font-display">projet</span> en<span
                     class="text-indigo-500 font-display"> image !</span>
             </h2>
         </div>
-        <div class="flex flex-col items-end w-1/2 lg:flex-row lg:justify-end">
+        <div class="flex flex-col items-end w-1/2 xl:flex-row xl:justify-end">
             <?php $link = get_field('button') ?>
             <?php $link_second = get_field('secondary_button') ?>
-            <button onclick="location.href='<?= esc_url($link['url']) ?>'" class="px-16 py-8 lg:text-sm text-xl bg-indigo-600 rounded lg:px-10 lg:py-4 mb-6 lg:mb-0 lg:mr-6">
+            <button onclick="location.href='<?= esc_url($link['url']) ?>'" class="px-16 py-8 xl:text-sm text-xl bg-indigo-600 rounded xl:px-10 xl:py-4 mb-6 xl:mb-0 xl:mr-6">
                 <?= esc_html($link['title']) ?>
             </button>
 
-            <button onclick="location.href='<?= esc_url($link_second['url']) ?>'" class="px-16 py-8 lg:text-sm text-xl bg-sky-600 rounded lg:px-10 lg:py-4">
+            <button onclick="location.href='<?= esc_url($link_second['url']) ?>'" class="px-16 py-8 xl:text-sm text-xl bg-sky-600 rounded xl:px-10 xl:py-4">
                 <?= esc_html($link_second['title']) ?>
             </button>
         </div>
@@ -27,7 +27,7 @@
                 <?php while( have_rows('images') ) : the_row(); ?>
                     <?php $img = get_sub_field('img') ?>
                     <div
-                       class="flex flex-col justify-start items-start w-[600px] h-[500px] lg:h-[400px] p-14 pb-4 pt-2 relative">
+                       class="flex flex-col justify-start items-start w-[600px] h-[500px] xl:h-[400px] p-14 pb-4 pt-2 relative">
                         <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
                     </div>
                     <style>
@@ -45,7 +45,7 @@
             <?php if(have_rows('images')): ?>
                 <?php while( have_rows('images') ) : the_row(); ?>
                     <?php $img = get_sub_field('img') ?>
-                    <div class="flex flex-col justify-start items-start w-[600px] h-[500px] lg:h-[400px] p-14 pb-4 pt-2 relative">
+                    <div class="flex flex-col justify-start items-start w-[600px] h-[500px] xl:h-[400px] p-14 pb-4 pt-2 relative">
                         <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
                     </div>
                     <style>
@@ -61,16 +61,16 @@
     </div>
 
     <section class="flex justify-between w-full mt-[300px] grid grid-cols-8 gap-20">
-        <article class="col-span-8 lg:col-span-3">
-            <h2 class="text-6xl leading-snug normal-case lg:text-5xl mb-6">
+        <article class="col-span-8 xl:col-span-3">
+            <h2 class="text-6xl leading-snug normal-case xl:text-5xl mb-6">
                 Résumé du projet
             </h2>
-            <div class="flex flex-col text-xl lg:text-base gap-4">
+            <div class="flex flex-col text-xl xl:text-base gap-4">
                 <?php the_field('description'); ?>
             </div>
         </article>
-        <article class="lg:col-start-5 col-span-8 lg:col-span-3">
-            <h2 class="text-6xl leading-snug normal-case lg:text-5xl">
+        <article class="xl:col-start-5 col-span-8 xl:col-span-3">
+            <h2 class="text-6xl leading-snug normal-case xl:text-5xl">
                 Les technologies utilisés
             </h2>
             <!--            block technos -->
@@ -93,10 +93,10 @@
     <div class="flex justify-center items-center mt-[300px] bg-slate-1000 shadow-innercustom rounded p-20">
         <div>
             <div class="flex justify-center items-center w-full">
-                <h2 class="text-4xl font-bold lg:text-3xl">Développons <span
-                        class="font-black text-indigo-500 lg:font-bold font-display">ensemble</span> vos projets</h2>
+                <h2 class="text-4xl font-bold xl:text-3xl">Développons <span
+                        class="font-black text-indigo-500 xl:font-bold font-display">ensemble</span> vos projets</h2>
             </div>
-            <p class="py-16 text-xl text-center lg:py-10 lg:text-sm">
+            <p class="py-16 text-xl text-center xl:py-10 xl:text-sm">
                 Une idée, un projet ?
                 Je suis là pour répondre à vos demandes et vous accompagner.
                 <br><br>
@@ -104,7 +104,7 @@
             </p>
             <div class="flex justify-center items-center">
                 <button onclick="location.href = '/contact'"
-                        class="px-16 py-8 lg:text-sm text-xl bg-indigo-600 rounded lg:px-10 lg:py-4">Me
+                        class="px-16 py-8 xl:text-sm text-xl bg-indigo-600 rounded xl:px-10 xl:py-4">Me
                     contacter
                 </button>
             </div>

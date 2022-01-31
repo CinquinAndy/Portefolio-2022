@@ -20,12 +20,12 @@
 <?php $menu = wp_get_nav_menu_items('andycinquin_menu') ?>
 <!-- Nav part - Header : Btn - logo - contact -->
 <header
-    class="fixed top-0 left-0 w-screen h-[80px] z-50 flex flex-row-reverse lg:flex-row justify-between items-center px-10 lg:px-20 mt-20 lg:mt-0">
+    class="fixed top-0 left-0 w-screen h-[80px] z-50 flex flex-row-reverse xl:flex-row justify-between items-center px-10 xl:px-20 mt-20 xl:mt-0">
     <div>
         <button id="btnNav" class="z-40 menu"
                 onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')); "
                 aria-label="Main Menu">
-            <svg class="z-30 w-20 h-20 lg:w-10 lg:h-10" viewBox="0 0 100 100" stroke="currentColor">
+            <svg class="z-30 w-20 h-20 xl:w-10 xl:h-10" viewBox="0 0 100 100" stroke="currentColor">
                 <path class="line line1"
                       d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"/>
                 <path class="line line2" d="M 20,50 H 80"/>
@@ -35,11 +35,11 @@
         </button>
 
     </div>
-    <a href="/" class="w-20 h-20 lg:w-10 lg:h-10">
+    <a href="/" class="w-20 h-20 xl:w-10 xl:h-10">
         <img src="<?= get_template_directory_uri() ?>/assets/Ressources/icons/logov2.svg"
              alt="Logo Cinquin Andy Signature">
     </a>
-    <a href="/contact" class="hidden text-sm button-animated smoke font-body lg:block">
+    <a href="/contact" class="hidden text-sm button-animated smoke font-body xl:block">
         <h2>CONTACT</h2>
     </a>
 </header>
@@ -48,7 +48,7 @@
      class="transition-transform flex fixed w-screen h-screen -z-10 opacity-0
      pointer-events-none transform -translate-y-[100vh]">
     <div
-        class="flex flex-col gap-24 justify-around p-20 pt-64 w-full h-full bg-gradient-to-b border-opacity-10 lg:pt-36 lg:w-2/5 border-r-40 from-indigo-1100 to-sky-1100 border-slate-50">
+        class="flex flex-col gap-24 justify-around p-20 pt-64 w-full h-full bg-gradient-to-b border-opacity-10 xl:pt-36 xl:w-2/5 border-r-40 from-indigo-1100 to-sky-1100 border-slate-50">
 
         <?php if (is_front_page()): ?>
             <!--        Si page d'accueil -->
@@ -104,7 +104,7 @@
         <?php endif ?>
 
         <div>
-            <hr class="mb-20 w-32 border opacity-75 lg:mb-10 lg:w-10">
+            <hr class="mb-20 w-32 border opacity-75 xl:mb-10 xl:w-10">
             <div class="flex">
                 <!--    MEDIA ( REAPETED - CARE ! ) -->
                 <div class="flex gap-10 justify-evenly items-center">
@@ -112,7 +112,7 @@
                     <a class="text-indigo-500 hover:text-slate-50"
                        href="https://www.facebook.com/Cinquin.Andy.Developpeur.Freelance"
                        rel="noopener nofollow noreferrer" target="_blank">
-                        <svg class="w-14 h-14 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <svg class="w-14 h-14 xl:w-8 xl:h-8" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
                         </svg>
@@ -120,7 +120,7 @@
                     <!--        Insta -->
                     <a class="text-indigo-500 hover:text-slate-50" href="https://www.instagram.com/cinquin.andy/"
                        rel="noopener nofollow noreferrer" target="_blank">
-                        <svg class="w-14 h-14 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <svg class="w-14 h-14 xl:w-8 xl:h-8" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="m12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.758 6.158 6.158 6.158 3.403 0 6.158-2.758 6.158-6.158 0-3.403-2.758-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.789-3.997 3.997-3.997 3.997 1.789 3.997 3.997c.001 2.208-1.788 3.997-3.997 3.997z"/>
                             <path
@@ -131,7 +131,7 @@
                     <!--        Linkedin -->
                     <a class="text-indigo-500 hover:text-slate-50" href="https://www.linkedin.com/in/andy-cinquin/"
                        rel="noopener nofollow noreferrer" target="_blank">
-                        <svg class="w-14 h-14 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <svg class="w-14 h-14 xl:w-8 xl:h-8" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"/>
                             <path d="m.396 7.977h4.976v16.023h-4.976z"/>
@@ -142,7 +142,7 @@
                     <!--        GitHub-->
                     <a class="text-indigo-500 hover:text-slate-50" href="https://github.com/CinquinAndy/"
                        rel="noopener nofollow noreferrer" target="_blank">
-                        <svg class="w-14 h-14 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <svg class="w-14 h-14 xl:w-8 xl:h-8" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="m12.29 21.499c3.73 0 8.94.09 10.835-3.701.715-1.449.875-3.122.875-4.7h-.001c0-2.073-.575-4.047-1.95-5.651.255-.766.385-1.573.385-2.385 0-1.064-.24-1.598-.73-2.563-2.24 0-3.69.42-5.39 1.742-1.31-.311-2.67-.455-4.02-.455-1.495 0-2.986.154-4.435.495-1.725-1.336-3.175-1.781-5.44-1.781-.484.965-.729 1.499-.729 2.563 0 .811.125 1.632.385 2.414-1.38 1.589-2.075 3.548-2.075 5.621 0 1.578.281 3.266 1.01 4.701 1.97 3.835 7.49 3.7 11.28 3.7zm-5.289-9.99c.95 0 1.865.168 2.8.297 3.418.52 5.215-.297 7.31-.297 2.339 0 3.675 1.915 3.675 4.087 0 4.349-4.015 5.012-7.53 5.012h-2.41c-3.5 0-7.52-.667-7.52-5.012 0-2.172 1.334-4.087 3.675-4.087z"/>
                             <path
@@ -154,7 +154,7 @@
                     <!--        Malt -->
                     <a class="text-indigo-500 hover:text-slate-50" href="https://www.malt.fr/profile/andycinquin/"
                        rel="noopener nofollow noreferrer" target="_blank">
-                        <svg class="w-14 h-14 lg:w-8 lg:h-8" viewBox="0 0 1000 1000" fill="currentColor">
+                        <svg class="w-14 h-14 xl:w-8 xl:h-8" viewBox="0 0 1000 1000" fill="currentColor">
                             <path d="M855.8,144.4c-75.3-75.3-156.2-26.7-206.4,23.9L172.5,644.8c-50.6,50.6-103.2,127.1-23.9,206.4
 		c79.3,79.3,156.2,26.7,206.4-23.9l476.5-476.5C882.5,300.2,931.1,219.7,855.8,144.4z"/>
                             <path d="M400.4,124.9l100.8,100.8L604,122.9c7.2-7.2,13.9-13.5,21.1-19.5C614.3,49.2,583.3,0.2,501.2,0.2
@@ -175,18 +175,18 @@
             </div>
         </div>
         <div></div>
-        <div class="flex flex-col text-3xl lg:text-xs text-slate-300">
+        <div class="flex flex-col text-3xl xl:text-xs text-slate-300">
             <p class="normal-case font-body">72 avenue camus, 44000 Nantes</p>
-            <a class="mt-10 normal-case lg:mt-2 font-body" href="tel:+33621582684">+33 6 21 58 26 84</a>
+            <a class="mt-10 normal-case xl:mt-2 font-body" href="tel:+33621582684">+33 6 21 58 26 84</a>
         </div>
-        <div class="block lg:hidden"></div>
+        <div class="block xl:hidden"></div>
     </div>
-    <div id="nav-right" class="hidden w-3/5 h-full bg-black bg-opacity-90 lg:block"></div>
+    <div id="nav-right" class="hidden w-3/5 h-full bg-black bg-opacity-90 xl:block"></div>
 </nav>
 <?php if (!is_home() && !is_page('contact')): ?>
 <div class="flex relative justify-center items-center w-screen h-screen">
     <?php if (!is_page("contact")): ?>
-        <h1 class="z-20 text-7xl font-light font-semibold tracking-widest lg:text-8xl uppercase">
+        <h1 class="z-20 text-7xl font-light font-semibold tracking-widest xl:text-8xl uppercase">
             <?= is_home() ? single_post_title() : get_the_title(); ?>
         </h1>
     <?php endif; ?>
@@ -198,11 +198,11 @@
     </div>
     <!--    MEDIA -->
     <div
-        class="flex absolute right-0 bottom-0 flex-col gap-16 justify-evenly items-center p-10 mb-32 lg:p-20 lg:gap-10 lg:mb-0">
+        class="flex absolute right-0 bottom-0 flex-col gap-16 justify-evenly items-center p-10 mb-32 xl:p-20 xl:gap-10 xl:mb-0">
         <!--        Facebook -->
         <a class="text-slate-300 hover:text-slate-50" href="https://www.facebook.com/Cinquin.Andy.Developpeur.Freelance"
            rel="noopener nofollow noreferrer" target="_blank">
-            <svg class="w-14 h-14 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-14 h-14 xl:w-8 xl:h-8" viewBox="0 0 24 24" fill="currentColor">
                 <path
                     d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
             </svg>
@@ -210,7 +210,7 @@
         <!--        Insta -->
         <a class="text-slate-300 hover:text-slate-50" href="https://www.instagram.com/cinquin.andy/"
            rel="noopener nofollow noreferrer" target="_blank">
-            <svg class="w-14 h-14 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-14 h-14 xl:w-8 xl:h-8" viewBox="0 0 24 24" fill="currentColor">
                 <path
                     d="m12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.758 6.158 6.158 6.158 3.403 0 6.158-2.758 6.158-6.158 0-3.403-2.758-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.789-3.997 3.997-3.997 3.997 1.789 3.997 3.997c.001 2.208-1.788 3.997-3.997 3.997z"/>
                 <path
@@ -221,7 +221,7 @@
         <!--        Linkedin -->
         <a class="text-slate-300 hover:text-slate-50" href="https://www.linkedin.com/in/andy-cinquin/"
            rel="noopener nofollow noreferrer" target="_blank">
-            <svg class="w-14 h-14 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-14 h-14 xl:w-8 xl:h-8" viewBox="0 0 24 24" fill="currentColor">
                 <path
                     d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"/>
                 <path d="m.396 7.977h4.976v16.023h-4.976z"/>
@@ -232,7 +232,7 @@
         <!--        GitHub-->
         <a class="text-slate-300 hover:text-slate-50" href="https://github.com/CinquinAndy/"
            rel="noopener nofollow noreferrer" target="_blank">
-            <svg class="w-14 h-14 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-14 h-14 xl:w-8 xl:h-8" viewBox="0 0 24 24" fill="currentColor">
                 <path
                     d="m12.29 21.499c3.73 0 8.94.09 10.835-3.701.715-1.449.875-3.122.875-4.7h-.001c0-2.073-.575-4.047-1.95-5.651.255-.766.385-1.573.385-2.385 0-1.064-.24-1.598-.73-2.563-2.24 0-3.69.42-5.39 1.742-1.31-.311-2.67-.455-4.02-.455-1.495 0-2.986.154-4.435.495-1.725-1.336-3.175-1.781-5.44-1.781-.484.965-.729 1.499-.729 2.563 0 .811.125 1.632.385 2.414-1.38 1.589-2.075 3.548-2.075 5.621 0 1.578.281 3.266 1.01 4.701 1.97 3.835 7.49 3.7 11.28 3.7zm-5.289-9.99c.95 0 1.865.168 2.8.297 3.418.52 5.215-.297 7.31-.297 2.339 0 3.675 1.915 3.675 4.087 0 4.349-4.015 5.012-7.53 5.012h-2.41c-3.5 0-7.52-.667-7.52-5.012 0-2.172 1.334-4.087 3.675-4.087z"/>
                 <path
@@ -243,8 +243,8 @@
         </a>
     </div>
     <!--    PAGE -->
-    <div class="flex absolute bottom-0 left-0 justify-center items-center p-20 mb-24 lg:p-20 lg:mb-0">
-        <h2 class="text-3xl tracking-wider opacity-20 origin-bottom-left -rotate-90 font-body lg:text-xl">‣
+    <div class="flex absolute bottom-0 left-0 justify-center items-center p-20 mb-24 xl:p-20 xl:mb-0">
+        <h2 class="text-3xl tracking-wider opacity-20 origin-bottom-left -rotate-90 font-body xl:text-xl">‣
             <?= is_home() ? single_post_title() : get_the_title(); ?>
         </h2>
     </div>
