@@ -30,7 +30,7 @@
                 <?php while (have_rows('images')) : the_row(); ?>
                     <?php $img = get_sub_field('img') ?>
                     <div
-                        class="flex flex-col w-[400px] xl:w-[600px] <?= get_field('mobile') ? 'h-[800px] xl:h-[550px]' : 'h-[400px] xl:h-[350px]' ?> p-10 xl:p-14 pb-4 relative">
+                        class="flex flex-col w-[400px] xl:w-[600px] <?= get_field('mobile') ? 'h-[700px] xl:h-[900px]' : 'h-[400px] xl:h-[450px]' ?> p-10 xl:p-14 pb-4 relative">
                         <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
                     </div>
                     <style>

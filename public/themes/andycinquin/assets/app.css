@@ -684,6 +684,12 @@ select {
 .h-\[300px\] {
   height: 300px;
 }
+.h-\[600px\] {
+  height: 600px;
+}
+.h-\[700px\] {
+  height: 700px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1185,6 +1191,18 @@ select {
   }
   .xl\:h-\[75px\] {
     height: 75px;
+  }
+  .xl\:h-\[850px\] {
+    height: 850px;
+  }
+  .xl\:h-\[600px\] {
+    height: 600px;
+  }
+  .xl\:h-\[900px\] {
+    height: 900px;
+  }
+  .xl\:h-\[450px\] {
+    height: 450px;
   }
   .xl\:w-8 {
     width: 2rem;
