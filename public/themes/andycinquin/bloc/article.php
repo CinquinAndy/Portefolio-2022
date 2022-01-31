@@ -10,11 +10,13 @@
         <div class="flex flex-col items-end w-1/2 xl:flex-row xl:justify-end">
             <?php $link = get_field('button') ?>
             <?php $link_second = get_field('secondary_button') ?>
-            <button onclick="location.href='<?= esc_url($link['url']) ?>'" class="px-6 py-3 mb-4 text-xs bg-indigo-600 rounded xl:text-sm xl:px-10 xl:py-4 xl:mb-0 xl:mr-6">
+            <button onclick="location.href='<?= esc_url($link['url']) ?>'"
+                    class="px-6 py-3 mb-4 text-xs bg-indigo-600 rounded xl:text-sm xl:px-10 xl:py-4 xl:mb-0 xl:mr-6">
                 <?= esc_html($link['title']) ?>
             </button>
 
-            <button onclick="location.href='<?= esc_url($link_second['url']) ?>'" class="px-6 py-3 mb-4 text-xs bg-sky-600 rounded xl:text-sm xl:px-10 xl:py-4">
+            <button onclick="location.href='<?= esc_url($link_second['url']) ?>'"
+                    class="px-6 py-3 mb-4 text-xs bg-sky-600 rounded xl:mb-0 xl:text-sm xl:px-10 xl:py-4">
                 <?= esc_html($link_second['title']) ?>
             </button>
         </div>
@@ -24,16 +26,16 @@
         <div class="flex flex-row flex-nowrap gap-[20px] xl:gap-[40px] animate-scrolling-rea">
 
             <?php $i = 0 ?>
-            <?php if(have_rows('images')): ?>
-                <?php while( have_rows('images') ) : the_row(); ?>
+            <?php if (have_rows('images')): ?>
+                <?php while (have_rows('images')) : the_row(); ?>
                     <?php $img = get_sub_field('img') ?>
                     <div
-                        class="flex flex-col w-[400px] xl:w-[600px] h-[400px] xl:h-[350px] p-10 xl:p-14 pb-4 relative">
+                        class="flex flex-col w-[400px] xl:w-[600px] <?= get_field('mobile') ? 'h-[800px] xl:h-[550px]' : 'h-[400px] xl:h-[350px]' ?> p-10 xl:p-14 pb-4 relative">
                         <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
                     </div>
                     <style>
-                        .bg-<?= $i ?>{
-                            background: url("<?= $img['url'] ?>") center center no-repeat ;
+                        .bg-<?= $i ?> {
+                            background: url("<?= $img['url'] ?>") center center no-repeat;
                             background-size: cover;
                         }
                     </style>
@@ -42,16 +44,16 @@
             <?php endif; ?>
 
             <?php $i = 0 ?>
-            <?php if(have_rows('images')): ?>
-                <?php while( have_rows('images') ) : the_row(); ?>
+            <?php if (have_rows('images')): ?>
+                <?php while (have_rows('images')) : the_row(); ?>
                     <?php $img = get_sub_field('img') ?>
                     <div
                         class="flex flex-col w-[400px] xl:w-[600px] h-[400px] xl:h-[350px] p-10 xl:p-14 pb-4 relative">
                         <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
                     </div>
                     <style>
-                        .bg-<?= $i ?>{
-                            background: url("<?= $img['url'] ?>") center center no-repeat ;
+                        .bg-<?= $i ?> {
+                            background: url("<?= $img['url'] ?>") center center no-repeat;
                             background-size: cover;
                         }
                     </style>
@@ -64,26 +66,27 @@
 
     <section class="flex justify-between w-full mt-[100px] xl:mt-[300px] grid grid-cols-8 gap-10 xl:gap-20">
         <article class="col-span-8 xl:col-span-3">
-            <h2 class="text-2xl leading-snug normal-case xl:text-5xl mb-6">
+            <h2 class="mb-6 text-2xl leading-snug normal-case xl:text-5xl">
                 Résumé du projet
             </h2>
-            <div class="flex flex-col text-xs xl:text-base gap-4">
+            <div class="flex flex-col gap-4 text-xs xl:text-base">
                 <?php the_field('description'); ?>
             </div>
         </article>
-        <article class="xl:col-start-5 col-span-8 xl:col-span-3">
+        <article class="col-span-8 xl:col-start-5 xl:col-span-3">
             <h2 class="text-2xl leading-snug normal-case xl:text-5xl">
                 Les technologies utilisés
             </h2>
             <!--            block technos -->
-            <div class="mt-10 xl:mt-20 grid grid-cols-4">
-                <?php if(have_rows('technos')): ?>
-                    <?php while( have_rows('technos') ) : the_row(); ?>
+            <div class="grid grid-cols-4 mt-10 xl:mt-20">
+                <?php if (have_rows('technos')): ?>
+                    <?php while (have_rows('technos')) : the_row(); ?>
                         <?php $img = get_sub_field('img') ?>
-                        <div class="relative flex justify-center items-center">
-                            <img src="<?= get_template_directory_uri() ?>/assets/Ressources/icons/3d.svg" alt="wp-test" class="h-20 w-20">
+                        <div class="flex relative justify-center items-center">
+                            <img src="<?= get_template_directory_uri() ?>/assets/Ressources/icons/3d.svg" alt="wp-test"
+                                 class="w-20 h-20">
                             <img src="<?= esc_url($img['url']) ?>" alt="<?= esc_url($img['alt']) ?>"
-                                 class="h-6 w-6 skew-y-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                 class="absolute top-1/2 left-1/2 w-6 h-6 transform -translate-x-1/2 -translate-y-1/2 skew-y-30">
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
@@ -92,10 +95,11 @@
     </section>
 
     <!--    Contact part -->
-    <div class="flex justify-center items-center mt-[100px] xl:mt-[300px] bg-slate-1000 shadow-innercustom rounded p-12 xl:p-20">
+    <div
+        class="flex justify-center items-center mt-[100px] xl:mt-[300px] bg-slate-1000 shadow-innercustom rounded p-12 xl:p-20">
         <div>
             <div class="flex justify-center items-center w-full">
-                <h2 class="text-xl font-bold xl:text-3xl text-center">Développons <span
+                <h2 class="text-xl font-bold text-center xl:text-3xl">Développons <span
                         class="font-black text-indigo-500 xl:font-bold font-display">ensemble</span> vos projets</h2>
             </div>
             <p class="py-8 text-sm text-center xl:py-10 xl:text-sm">

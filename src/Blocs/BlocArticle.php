@@ -8,6 +8,7 @@ use WordPlate\Acf\Fields\Link;
 use WordPlate\Acf\Fields\Repeater;
 use WordPlate\Acf\Fields\Text;
 use WordPlate\Acf\Fields\Textarea;
+use WordPlate\Acf\Fields\TrueFalse;
 use WordPlate\Acf\Fields\WysiwygEditor;
 
 class BlocArticle extends Bloc
@@ -19,6 +20,7 @@ class BlocArticle extends Bloc
     protected static function fields(): array
     {
         return [
+            TrueFalse::make("Mode Mobile", "mobile")->required()->defaultValue(false),
             Group::make("Groupe deuxième section", "second_section")->fields(
                 [
                     Text::make('Type (top)', 'type')->required()->placeholder("Type de la réalisation"),
