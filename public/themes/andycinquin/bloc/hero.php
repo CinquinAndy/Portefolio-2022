@@ -68,7 +68,7 @@
                 Me contacter
             </button>
             <button onclick="location.href = '/mes-realisations'"
-                    class="px-6 py-3 mb-4 text-xs bg-sky-600 rounded xl:text-sm xl:px-10 xl:py-4">Mes réalisations
+                    class="px-6 py-3 mb-4 text-xs bg-sky-600 rounded xl:mb-0 xl:text-sm xl:px-10 xl:py-4">Mes réalisations
             </button>
         </div>
     </div>
@@ -78,7 +78,7 @@
             <?php foreach (get_posts() as $post): ?>
                 <a href="<?= esc_url(get_permalink($post)) ?>"
                    class="flex flex-col w-[400px] xl:w-[600px] h-[400px] xl:h-[350px] p-10 xl:p-14 pb-4 relative">
-                    <h2 class="absolute mt-4 xl:mt-0 top-0 left-0 z-30 w-2/3 text-2xl font-black normal-case xl:text-3xl">
+                    <h2 class="absolute top-0 left-0 z-30 mt-4 w-2/3 text-2xl font-black normal-case xl:mt-0 xl:text-3xl">
                         <?= $post->post_title ?>
                     </h2>
                     <div
@@ -89,7 +89,7 @@
                             background-size: cover;
                         }
                     </style>
-                    <h2 class="absolute bottom-0 left-0 z-30 mt-4 xl:mt-0 text-xl font-black text-sky-400 xl:text-3xl xl:font-bold">
+                    <h2 class="absolute bottom-0 left-0 z-30 mt-4 text-xl font-black text-sky-400 xl:mt-0 xl:text-3xl xl:font-bold">
                         <?php preg_match('/"second_section_subtitle": "(.*)",/', $post->post_content, $matches) ?>
                         <?= $matches[1] ?>
                     </h2>
@@ -100,7 +100,7 @@
             <?php foreach (get_posts() as $post): ?>
                 <a href="<?= esc_url(get_permalink($post)) ?>"
                    class="flex flex-col w-[400px] xl:w-[600px] h-[400px] xl:h-[350px] p-10 xl:p-14 pb-4 relative">
-                    <h2 class="absolute mt-4 xl:mt-0 top-0 left-0 z-30 w-2/3 text-2xl font-black normal-case xl:text-3xl">
+                    <h2 class="absolute top-0 left-0 z-30 mt-4 w-2/3 text-2xl font-black normal-case xl:mt-0 xl:text-3xl">
                         <?= $post->post_title ?>
                     </h2>
                     <div
@@ -111,7 +111,7 @@
                             background-size: cover;
                         }
                     </style>
-                    <h2 class="absolute bottom-0 left-0 z-30 mt-4 xl:mt-0 text-xl font-black text-sky-400 xl:text-3xl xl:font-bold">
+                    <h2 class="absolute bottom-0 left-0 z-30 mt-4 text-xl font-black text-sky-400 xl:mt-0 xl:text-3xl xl:font-bold">
                         <?php preg_match('/"second_section_subtitle": "(.*)",/', $post->post_content, $matches) ?>
                         <?= $matches[1] ?>
                     </h2>
@@ -124,7 +124,7 @@
     <div class="flex justify-center items-center mt-[100px] xl:mt-[300px] bg-slate-1000 shadow-innercustom rounded p-12 xl:p-20">
         <div>
             <div class="flex justify-center items-center w-full">
-                <h2 class="text-xl font-bold xl:text-3xl text-center">Développons <span
+                <h2 class="text-xl font-bold text-center xl:text-3xl">Développons <span
                         class="font-black text-indigo-500 xl:font-bold font-display">ensemble</span> vos projets</h2>
             </div>
             <p class="py-8 text-sm text-center xl:py-10 xl:text-sm">

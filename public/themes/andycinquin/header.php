@@ -48,7 +48,7 @@
      class="transition-transform flex fixed w-screen h-screen -z-10 opacity-0
      pointer-events-none transform -translate-y-[100vh]">
     <div
-        class="flex flex-col gap-12 justify-around p-4 pt-28 w-full h-full bg-gradient-to-b border-r-0 border-opacity-10 xl:gap-24 xl:pt-36 xl:w-2/5 xl:border-r-40 from-indigo-1100 to-sky-1100 border-slate-50">
+        class="flex flex-col gap-12 justify-around p-4 xl:p-20 pt-28 w-full h-full bg-gradient-to-b border-r-0 border-opacity-10 xl:gap-24 xl:pt-36 xl:w-2/5 xl:border-r-40 from-indigo-1100 to-sky-1100 border-slate-50">
         <?php if (is_front_page()): ?>
             <!--        Si page d'accueil -->
             <a class="relative text-indigo-400" href="<?= esc_url($menu[0]->url) ?>" rel="noopener">

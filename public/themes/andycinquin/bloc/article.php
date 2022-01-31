@@ -23,7 +23,7 @@
     </div>
 
     <div class="flex overflow-hidden flex-row flex-nowrap mt-10 xl:mt-20">
-        <div class="flex flex-row flex-nowrap gap-[20px] xl:gap-[40px] animate-scrolling-rea">
+        <div class="flex flex-row flex-nowrap gap-[20px] xl:gap-[40px] animate-scrolling-article">
 
             <?php $i = 0 ?>
             <?php if (have_rows('images')): ?>
@@ -43,23 +43,16 @@
                 <?php endwhile; ?>
             <?php endif; ?>
 
-            <?php $i = 0 ?>
-            <?php if (have_rows('images')): ?>
-                <?php while (have_rows('images')) : the_row(); ?>
-                    <?php $img = get_sub_field('img') ?>
-                    <div
-                        class="flex flex-col w-[400px] xl:w-[600px] h-[400px] xl:h-[350px] p-10 xl:p-14 pb-4 relative">
-                        <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
-                    </div>
-                    <style>
-                        .bg-<?= $i ?> {
-                            background: url("<?= $img['url'] ?>") center center no-repeat;
-                            background-size: cover;
-                        }
-                    </style>
-                    <?php $i++ ?>
-                <?php endwhile; ?>
-            <?php endif; ?>
+            <style>
+                @keyframes scroll-article {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(calc(-640px * <?= $i ?>));
+                    }
+                }
+            </style>
         </div>
     </div>
 
