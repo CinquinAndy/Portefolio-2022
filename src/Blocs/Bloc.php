@@ -25,7 +25,7 @@ abstract class Bloc
             'title' => static::$name . ' Bloc',
             'fields' => static::fields(),
             'location' => array_merge([
-                Location::where('block', 'acf/' . static::$name)
+                Location::if('block', 'acf/' . static::$name)
             ], static::location())
         ]);
     }
