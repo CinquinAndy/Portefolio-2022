@@ -1,33 +1,34 @@
-<section class="p-8 xl:p-20 pt-[300px] w-full ">
+<section class="p-8 xl:p-20 pt-[100px] pt-[300px] w-full ">
     <!--     Derniers projets -->
-    <div class="flex justify-between mt-[300px]">
+    <div class="flex justify-between mt-[100px] xl:mt-[300px]">
         <div class="w-1/2">
-            <h2 class="text-6xl leading-snug normal-case xl:text-5xl">
-                Le <span class="text-sky-500 font-display">projet</span> en<span
-                    class="text-indigo-500 font-display"> image !</span>
+            <h2 class="text-2xl leading-snug normal-case xl:text-5xl">
+                Mes derniers <span class="text-sky-500 font-display">projets</span><span
+                    class="text-indigo-500 font-display">&nbsp;réalisés&nbsp;!</span>
             </h2>
         </div>
         <div class="flex flex-col items-end w-1/2 xl:flex-row xl:justify-end">
             <?php $link = get_field('button') ?>
             <?php $link_second = get_field('secondary_button') ?>
-            <button onclick="location.href='<?= esc_url($link['url']) ?>'" class="px-16 py-8 xl:text-sm text-xl bg-indigo-600 rounded xl:px-10 xl:py-4 mb-6 xl:mb-0 xl:mr-6">
+            <button onclick="location.href='<?= esc_url($link['url']) ?>'" class="px-6 py-3 mb-4 text-xs bg-indigo-600 rounded xl:text-sm xl:px-10 xl:py-4 xl:mb-0 xl:mr-6">
                 <?= esc_html($link['title']) ?>
             </button>
 
-            <button onclick="location.href='<?= esc_url($link_second['url']) ?>'" class="px-16 py-8 xl:text-sm text-xl bg-sky-600 rounded xl:px-10 xl:py-4">
+            <button onclick="location.href='<?= esc_url($link_second['url']) ?>'" class="px-6 py-3 mb-4 text-xs bg-sky-600 rounded xl:text-sm xl:px-10 xl:py-4">
                 <?= esc_html($link_second['title']) ?>
             </button>
         </div>
     </div>
-    <div class="flex overflow-hidden flex-row flex-nowrap mt-20">
-        <div class="flex flex-row flex-nowrap gap-[40px] animate-scrolling-rea">
-            <!--            Animate firt part -->
+
+    <div class="flex overflow-hidden flex-row flex-nowrap mt-10 xl:mt-20">
+        <div class="flex flex-row flex-nowrap gap-[20px] xl:gap-[40px] animate-scrolling-rea">
+
             <?php $i = 0 ?>
             <?php if(have_rows('images')): ?>
                 <?php while( have_rows('images') ) : the_row(); ?>
                     <?php $img = get_sub_field('img') ?>
                     <div
-                       class="flex flex-col justify-start items-start w-[600px] h-[500px] xl:h-[400px] p-14 pb-4 pt-2 relative">
+                        class="flex flex-col w-[400px] xl:w-[600px] h-[400px] xl:h-[350px] p-10 xl:p-14 pb-4 relative">
                         <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
                     </div>
                     <style>
@@ -36,16 +37,16 @@
                             background-size: cover;
                         }
                     </style>
-                <?php $i++ ?>
+                    <?php $i++ ?>
                 <?php endwhile; ?>
             <?php endif; ?>
 
-            <!--            Animate second part -->
             <?php $i = 0 ?>
             <?php if(have_rows('images')): ?>
                 <?php while( have_rows('images') ) : the_row(); ?>
                     <?php $img = get_sub_field('img') ?>
-                    <div class="flex flex-col justify-start items-start w-[600px] h-[500px] xl:h-[400px] p-14 pb-4 pt-2 relative">
+                    <div
+                        class="flex flex-col w-[400px] xl:w-[600px] h-[400px] xl:h-[350px] p-10 xl:p-14 pb-4 relative">
                         <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
                     </div>
                     <style>
@@ -60,21 +61,22 @@
         </div>
     </div>
 
-    <section class="flex justify-between w-full mt-[300px] grid grid-cols-8 gap-20">
+
+    <section class="flex justify-between w-full mt-[100px] xl:mt-[300px] grid grid-cols-8 gap-10 xl:gap-20">
         <article class="col-span-8 xl:col-span-3">
-            <h2 class="text-6xl leading-snug normal-case xl:text-5xl mb-6">
+            <h2 class="text-2xl leading-snug normal-case xl:text-5xl mb-6">
                 Résumé du projet
             </h2>
-            <div class="flex flex-col text-xl xl:text-base gap-4">
+            <div class="flex flex-col text-xs xl:text-base gap-4">
                 <?php the_field('description'); ?>
             </div>
         </article>
         <article class="xl:col-start-5 col-span-8 xl:col-span-3">
-            <h2 class="text-6xl leading-snug normal-case xl:text-5xl">
+            <h2 class="text-2xl leading-snug normal-case xl:text-5xl">
                 Les technologies utilisés
             </h2>
             <!--            block technos -->
-            <div class="mt-20 grid grid-cols-4">
+            <div class="mt-10 xl:mt-20 grid grid-cols-4">
                 <?php if(have_rows('technos')): ?>
                     <?php while( have_rows('technos') ) : the_row(); ?>
                         <?php $img = get_sub_field('img') ?>
@@ -90,13 +92,13 @@
     </section>
 
     <!--    Contact part -->
-    <div class="flex justify-center items-center mt-[300px] bg-slate-1000 shadow-innercustom rounded p-20">
+    <div class="flex justify-center items-center mt-[100px] xl:mt-[300px] bg-slate-1000 shadow-innercustom rounded p-12 xl:p-20">
         <div>
             <div class="flex justify-center items-center w-full">
-                <h2 class="text-4xl font-bold xl:text-3xl">Développons <span
+                <h2 class="text-xl font-bold xl:text-3xl text-center">Développons <span
                         class="font-black text-indigo-500 xl:font-bold font-display">ensemble</span> vos projets</h2>
             </div>
-            <p class="py-16 text-xl text-center xl:py-10 xl:text-sm">
+            <p class="py-8 text-sm text-center xl:py-10 xl:text-sm">
                 Une idée, un projet ?
                 Je suis là pour répondre à vos demandes et vous accompagner.
                 <br><br>
@@ -104,8 +106,7 @@
             </p>
             <div class="flex justify-center items-center">
                 <button onclick="location.href = '/contact'"
-                        class="px-16 py-8 xl:text-sm text-xl bg-indigo-600 rounded xl:px-10 xl:py-4">Me
-                    contacter
+                        class="px-6 py-3 text-xs bg-indigo-600 rounded xl:text-sm xl:px-10 xl:py-4">Me contacter
                 </button>
             </div>
         </div>

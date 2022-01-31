@@ -529,6 +529,12 @@ select {
 .left-1\/4 {
   left: 25%;
 }
+.left-4 {
+  left: 1rem;
+}
+.-left-4 {
+  left: -1rem;
+}
 .z-50 {
   z-index: 50;
 }
@@ -564,6 +570,9 @@ select {
 }
 .col-start-7 {
   grid-column-start: 7;
+}
+.m-0 {
+  margin: 0px;
 }
 .my-6 {
   margin-top: 1.5rem;
@@ -630,6 +639,18 @@ select {
 .mb-12 {
   margin-bottom: 3rem;
 }
+.mt-\[100px\] {
+  margin-top: 100px;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mt-\[100vh\] {
+  margin-top: 100vh;
+}
+.mt-\[50vh\] {
+  margin-top: 50vh;
+}
 .block {
   display: block;
 }
@@ -687,6 +708,30 @@ select {
 .h-7 {
   height: 1.75rem;
 }
+.h-\[200px\] {
+  height: 200px;
+}
+.h-\[50px\] {
+  height: 50px;
+}
+.h-\[300px\] {
+  height: 300px;
+}
+.h-\[250px\] {
+  height: 250px;
+}
+.h-\[275px\] {
+  height: 275px;
+}
+.h-\[400px\] {
+  height: 400px;
+}
+.h-4 {
+  height: 1rem;
+}
+.h-\[75px\] {
+  height: 75px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -734,6 +779,18 @@ select {
 }
 .w-7 {
   width: 1.75rem;
+}
+.w-\[300px\] {
+  width: 300px;
+}
+.w-\[50px\] {
+  width: 50px;
+}
+.w-\[400px\] {
+  width: 400px;
+}
+.w-4 {
+  width: 1rem;
 }
 .origin-bottom-left {
   -webkit-transform-origin: bottom left;
@@ -850,6 +907,12 @@ select {
 .gap-8 {
   gap: 2rem;
 }
+.gap-\[20px\] {
+  gap: 20px;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -919,6 +982,9 @@ select {
 .p-12 {
   padding: 3rem;
 }
+.p-4 {
+  padding: 1rem;
+}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -959,6 +1025,22 @@ select {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .pt-28 {
   padding-top: 7rem;
 }
@@ -973,6 +1055,12 @@ select {
 }
 .pt-2 {
   padding-top: 0.5rem;
+}
+.pt-\[150px\] {
+  padding-top: 150px;
+}
+.pt-\[100px\] {
+  padding-top: 100px;
 }
 .text-center {
   text-align: center;
@@ -1018,6 +1106,10 @@ select {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .font-bold {
   font-weight: 700;
@@ -1165,6 +1257,21 @@ select {
   .xl\:mr-6 {
     margin-right: 1.5rem;
   }
+  .xl\:mt-20 {
+    margin-top: 5rem;
+  }
+  .xl\:mt-\[300px\] {
+    margin-top: 300px;
+  }
+  .xl\:mt-\[150px\] {
+    margin-top: 150px;
+  }
+  .xl\:mt-8 {
+    margin-top: 2rem;
+  }
+  .xl\:mt-10 {
+    margin-top: 2.5rem;
+  }
   .xl\:block {
     display: block;
   }
@@ -1216,6 +1323,9 @@ select {
   .xl\:w-\[75px\] {
     width: 75px;
   }
+  .xl\:w-\[600px\] {
+    width: 600px;
+  }
   .xl\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
@@ -1231,11 +1341,23 @@ select {
   .xl\:gap-10 {
     gap: 2.5rem;
   }
+  .xl\:gap-\[40px\] {
+    gap: 40px;
+  }
+  .xl\:gap-4 {
+    gap: 1rem;
+  }
+  .xl\:gap-20 {
+    gap: 5rem;
+  }
   .xl\:border-r-40 {
     border-right-width: 40px;
   }
   .xl\:p-20 {
     padding: 5rem;
+  }
+  .xl\:p-14 {
+    padding: 3.5rem;
   }
   .xl\:px-20 {
     padding-left: 5rem;
@@ -1267,6 +1389,9 @@ select {
   }
   .xl\:pt-36 {
     padding-top: 9rem;
+  }
+  .xl\:pt-\[300px\] {
+    padding-top: 300px;
   }
   .xl\:text-base {
     font-size: 1rem;

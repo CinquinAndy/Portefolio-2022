@@ -23,9 +23,9 @@
 <section class="z-50 min-h-screen xl:hidden">
     <div class="w-full flex flex-col gap-20 pt-[50vh] px-8">
         <?php foreach (get_posts(array('numberposts' => -1)) as $post): ?>
-            <a href="#" class="relative h-2/3">
+            <a href="#" class="relative h-full">
                 <?= get_the_post_thumbnail($post, 'large', "object-cover h-full") ?>
-                <h1 class="absolute bottom-4 left-0 glassmorph p-8 z-20 text-slate-50 text-6xl font-black"><?= $post->post_title ?></h1>
+                <h1 class="absolute bottom-4 -left-4 glassmorph p-4 z-20 text-slate-50 text-2xl font-black"><?= $post->post_title ?></h1>
             </a>
         <?php endforeach; ?>
     </div>

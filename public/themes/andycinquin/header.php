@@ -20,7 +20,7 @@
 <?php $menu = wp_get_nav_menu_items('andycinquin_menu') ?>
 <!-- Nav part - Header : Btn - logo - contact -->
 <header
-    class="fixed top-0 left-0 w-screen h-[40px] xl:h-[80px] z-50 flex flex-row-reverse xl:flex-row justify-between items-center px-8 xl:px-20 mt-8 xl:mt-0">
+    class="fixed top-0 left-0 w-screen h-[40px] xl:h-[80px] z-50 flex flex-row-reverse xl:flex-row justify-between items-center px-4 xl:px-20 mt-8 xl:mt-0">
     <div>
         <button id="btnNav" class="z-40 menu"
                 onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')); "
@@ -48,7 +48,7 @@
      class="transition-transform flex fixed w-screen h-screen -z-10 opacity-0
      pointer-events-none transform -translate-y-[100vh]">
     <div
-        class="flex flex-col gap-12 justify-around p-8 pt-28 w-full h-full bg-gradient-to-b border-r-0 border-opacity-10 xl:gap-24 xl:pt-36 xl:w-2/5 xl:border-r-40 from-indigo-1100 to-sky-1100 border-slate-50">
+        class="flex flex-col gap-12 justify-around p-4 pt-28 w-full h-full bg-gradient-to-b border-r-0 border-opacity-10 xl:gap-24 xl:pt-36 xl:w-2/5 xl:border-r-40 from-indigo-1100 to-sky-1100 border-slate-50">
         <?php if (is_front_page()): ?>
             <!--        Si page d'accueil -->
             <a class="relative text-indigo-400" href="<?= esc_url($menu[0]->url) ?>" rel="noopener">
@@ -185,7 +185,7 @@
 <?php if (!is_home() && !is_page('contact')): ?>
     <div class="flex relative justify-center items-center w-screen h-screen">
         <?php if (!is_page("contact")): ?>
-            <h1 class="z-20 text-4xl font-light font-semibold tracking-widest uppercase xl:text-8xl">
+            <h1 class="z-20 text-3xl font-light font-semibold tracking-widest uppercase xl:text-8xl">
                 <?= is_home() ? single_post_title() : get_the_title(); ?>
             </h1>
         <?php endif; ?>
@@ -197,7 +197,7 @@
         </div>
         <!--    MEDIA -->
         <div
-            class="flex absolute right-0 bottom-0 flex-col gap-8 justify-evenly items-center p-8 mb-14 xl:mb-0 xl:p-20 xl:gap-10">
+            class="flex absolute right-0 bottom-0 flex-col gap-8 justify-evenly items-center p-4 mb-14 xl:mb-0 xl:p-20 xl:gap-10">
             <!--        Facebook -->
             <a class="text-slate-300 hover:text-slate-50"
                href="https://www.facebook.com/Cinquin.Andy.Developpeur.Freelance"
@@ -243,8 +243,8 @@
             </a>
         </div>
         <!--    PAGE -->
-        <div class="flex absolute bottom-0 left-0 justify-center items-center p-12 mb-12 xl:p-20 xl:mb-0">
-            <h2 class="text-lg tracking-wider opacity-20 origin-bottom-left -rotate-90 font-body xl:text-xl">‣
+        <div class="flex absolute bottom-0 left-0 justify-center items-center p-8 mb-12 xl:p-20 xl:mb-0">
+            <h2 class="text-sm tracking-wider opacity-20 origin-bottom-left -rotate-90 font-body xl:text-xl">‣
                 <?= is_home() ? single_post_title() : get_the_title(); ?>
             </h2>
         </div>
