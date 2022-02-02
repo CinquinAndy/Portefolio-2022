@@ -1,4 +1,4 @@
-<section class="p-8 xl:p-20 pt-[100px] pt-[300px] w-full ">
+<section class="px-4 xl:p-20 pt-[100px] pt-[300px] w-full ">
     <!--     Derniers projets -->
     <div class="flex justify-between mt-[100px] xl:mt-[300px]">
         <div class="w-1/2">
@@ -25,23 +25,26 @@
     <div class="flex overflow-hidden flex-row flex-nowrap mt-10 xl:mt-20">
         <div class="flex flex-row flex-nowrap gap-[20px] xl:gap-[40px] animate-scrolling-article">
 
-            <?php $i = 0 ?>
-            <?php if (have_rows('images')): ?>
-                <?php while (have_rows('images')) : the_row(); ?>
-                    <?php $img = get_sub_field('img') ?>
-                    <div
-                        class="flex flex-col w-[400px] xl:w-[600px] <?= get_field('mobile') ? 'h-[700px] xl:h-[1100px]' : 'h-[500px] xl:h-[600px]' ?> p-10 xl:p-14 pb-4 relative">
-                        <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
-                    </div>
-                    <style>
-                        .bg-<?= $i ?> {
-                            background: url("<?= $img['url'] ?>") center center no-repeat;
-                            background-size: cover;
-                        }
-                    </style>
-                    <?php $i++ ?>
-                <?php endwhile; ?>
-            <?php endif; ?>
+            <?php for ($y = 0; $y < 4; $y++): ?>
+                <?php $i = 0 ?>
+                <?php if (have_rows('images')): ?>
+                    <?php while (have_rows('images')) : the_row(); ?>
+                        <?php $img = get_sub_field('img') ?>
+                        <div
+                            class="flex flex-col <?= get_field('mobile') ? 'w-[360px] h-[730px] xl:w-[540px] xl:h-[1100px]' : 'w-[480px] h-[270px] xl:w-[960px] xl:h-[540px]' ?> p-10 xl:p-14 pb-4 relative">
+                            <div class="custom-card w-full h-full shadow-innercustom bg-<?= $i ?> z-10 my-2"></div>
+                        </div>
+                        <style>
+                            .bg-<?= $i ?> {
+                                background: url("<?= $img['url'] ?>") center center no-repeat;
+                                background-size: cover;
+                            }
+                        </style>
+                        <?php $i++ ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            <?php endfor; ?>
+
 
             <style>
                 @keyframes scroll-article {
@@ -49,7 +52,26 @@
                         transform: translateX(0);
                     }
                     100% {
-                        transform: translateX(calc(-640px * <?= $i ?>));
+                        transform: translateX(-<?= get_field('mobile') ? ((360+20)*$i) . 'px'  : ((480+40)*$i) . 'px' ?>);
+                    }
+                }
+
+                @keyframes scroll-article-mobile {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-<?= get_field('mobile') ? ((540+20)*$i) . 'px'  : ((960+40)*$i) . 'px' ?>);
+                    }
+                }
+
+                .animate-scrolling-article {
+                    animation: scroll-article <?= $i*2*3 ?>s linear infinite;
+                }
+
+                @media (max-width: 1280px) {
+                    .animate-scrolling-article {
+                        animation: scroll-article-mobile <?= $i*2*3 ?>s linear infinite;
                     }
                 }
             </style>
