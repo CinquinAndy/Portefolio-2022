@@ -24,7 +24,7 @@
         </div>
         <div class="flex col-span-8 xl:col-span-6 col-start-1 xl:col-start-2 justify-between xl:mt-8 xl:mt-10 text-xs">
             <div class="text-xs mr-10 xl:m-0">
-                © 2021 - Andy CINQUIN - Tous droits réservés - Siret : 880 505 276 00019 - NAF : 6201Z
+                ©<?= date("Y") ?> - Andy CINQUIN - Tous droits réservés - Siret : 880 505 276 00019 - NAF : 6201Z
             </div>
             <div class="flex gap-4">
                 <!--    MEDIA ( REAPETED - CARE ! ) -->
