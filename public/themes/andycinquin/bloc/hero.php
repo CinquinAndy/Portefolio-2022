@@ -4,7 +4,7 @@
         <div class="w-2/3 xl:w-1/2">
             <h2 class="text-2xl leading-snug normal-case xl:text-5xl">
                 Mes différents <span class="text-sky-600 font-display">services</span> pour
-                realiser votre <span class="text-indigo-600 font-display">projet.</span>
+                réaliser votre <span class="text-indigo-600 font-display">projet.</span>
             </h2>
         </div>
         <div class="flex justify-end items-end w-1/2">

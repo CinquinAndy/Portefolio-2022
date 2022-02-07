@@ -90,7 +90,7 @@
         </article>
         <article class="col-span-8 xl:col-start-5 xl:col-span-3">
             <h2 class="text-2xl leading-snug normal-case xl:text-5xl">
-                Les technologies utilisés
+                Les technologies utilisées
             </h2>
             <!--            block technos -->
             <div class="grid grid-cols-4 mt-10 xl:mt-20">
