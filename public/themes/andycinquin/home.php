@@ -4,7 +4,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- HERO -->
 <div class="flex justify-center items-center w-screen h-screen fixed -z-10 pointer-events-none brightness-75">
-    <h1 class="z-20 text-7xl font-light font-semibold tracking-widest uppercase xl:text-8xl">
+    <h1 class="z-20 text-3xl font-light font-semibold tracking-widest uppercase xl:text-8xl">
         <?= is_home() ? single_post_title() : get_the_title(); ?>
     </h1>
     <div
@@ -13,9 +13,9 @@
              class="mb-32 ml-16 opacity-20 brightness-75 -rotate-12 w-112 h-112" alt="Logo avatar andy cinquin">
     </div>
     <!--    PAGE -->
-    <div class="flex absolute bottom-0 left-0 justify-center items-center p-20 mb-24 xl:p-20 xl:mb-0">
-        <h2 class="text-3xl tracking-wider uppercase opacity-20 origin-bottom-left -rotate-90 font-body xl:text-xl z-20">
-            ‣ <?= is_home() ? single_post_title() : get_the_title(); ?>
+    <div class="flex absolute bottom-0 left-0 justify-center items-center p-8 mb-12 xl:p-20 xl:mb-0">
+        <h2 class="text-sm tracking-wider opacity-20 origin-bottom-left -rotate-90 font-body xl:text-xl">‣
+            <?= is_home() ? single_post_title() : get_the_title(); ?>
         </h2>
     </div>
 </div>
@@ -23,7 +23,7 @@
 <section class="z-50 min-h-screen xl:hidden">
     <div class="w-full flex flex-col gap-20 pt-[50vh] px-8">
         <?php foreach (get_posts(array('numberposts' => -1)) as $post): ?>
-            <a href="#" class="relative h-full">
+            <a href="<?= esc_url(get_permalink($post)) ?>" class="relative h-full">
                 <?= get_the_post_thumbnail($post, 'large', "object-cover h-full") ?>
                 <h1 class="absolute bottom-4 -left-4 glassmorph p-4 z-20 text-slate-50 text-2xl font-black"><?= $post->post_title ?></h1>
             </a>
