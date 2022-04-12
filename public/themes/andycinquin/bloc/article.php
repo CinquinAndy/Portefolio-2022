@@ -10,12 +10,12 @@
         <div class="flex flex-col items-end w-1/2 xl:flex-row xl:justify-end">
             <?php $link = get_field('button') ?>
             <?php $link_second = get_field('secondary_button') ?>
-            <button onclick="window.href='<?= esc_url($link['url']) ?>'"
+            <button onclick="window.open('<?= esc_url($link['url']) ?>','_blank')"
                     class="px-6 py-3 mb-4 text-xs bg-indigo-600 rounded xl:text-sm xl:px-10 xl:py-4 xl:mb-0 xl:mr-6">
                 <?= esc_html($link['title']) ?>
             </button>
 
-            <button onclick="window.href='<?= esc_url($link_second['url']) ?>'"
+            <button onclick="window.open('<?= esc_url($link_second['url']) ?>','_blank')"
                     class="px-6 py-3 mb-4 text-xs bg-sky-600 rounded xl:mb-0 xl:text-sm xl:px-10 xl:py-4">
                 <?= esc_html($link_second['title']) ?>
             </button>
